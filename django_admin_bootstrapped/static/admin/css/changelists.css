@@ -14,3 +14,7 @@
 #action-toggle {
     display: none;
 }
+
+.required {
+    color: blue;
+}
