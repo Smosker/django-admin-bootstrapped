@@ -49,7 +49,6 @@
     {% if not is_popup %}
     <!-- Header -->
     <div class="navbar navbar-default navbar-fixed-top">
-        <a href="{% url 'admin:core_controltest_changelist' %}" class="btn btn-md btn-primary" >Тестирование контролей</a>
         <div class="navbar-inner">
             <div class="container">
                 <div class="navbar-header">
@@ -59,11 +58,11 @@
                         <span class="icon-bar"></span>
                     </button>
 
+                    <a href="{% url 'admin:core_controltest_changelist' %}" class=" navbar-togglebtn btn-md btn-primary" >Тестирование контролей</a>
+                    <a href="{% url 'admin:core_controlplan_changelist' %}" class=" navbar-togglebtn btn-md btn-primary" >Контрольный план</a>
+                    <a href="{% url 'admin:core_ipe_changelist' %}" class=" navbar-togglebtn btn-md btn-primary" >IPE</a>
+                    <a href="{% url 'admin:core_deficiency_changelist' %}" class=" navbar-togglebtn btn-md btn-primary" >Дефекты</a>
                     {% block branding %}
-                    <a href="{% url 'admin:core_controlplan_changelist' %}" class="btn btn-md btn-primary" >Контрольный план</a>
-
-                    <a href="{% url 'admin:core_ipe_changelist' %}" class="btn btn-md btn-primary" >IPE</a>
-                    <a href="{% url 'admin:core_deficiency_changelist' %}" class="btn btn-md btn-primary" >Дефекты</a>
                     {% endblock %}
                 </div>
                 <div id="header-navbar-collapse" class="navbar-collapse collapse navbar-{% if LANGUAGE_BIDI %}left{% else %}right{% endif %}">
