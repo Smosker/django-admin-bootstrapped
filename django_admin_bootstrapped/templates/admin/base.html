@@ -70,7 +70,7 @@
                     <li><a href="{% url 'admin:core_deficiency_changelist' %}">Дефекты</a></li>
                     </ul>
                 <ul class="nav navbar-nav navbar-right">
-                <li>{% trans 'Welcome,' %} <strong>{% filter force_escape %}{% firstof user.get_short_name user.get_username %}{% endfilter %}</strong></li>
+                <li><a href="#">{% trans 'Welcome,' %} <strong>{% filter force_escape %}{% firstof user.get_short_name user.get_username %}{% endfilter %}</strong></a></li>
                 </ul>
                 <div id="header-navbar-collapse" class="navbar-collapse collapse navbar-{% if LANGUAGE_BIDI %}left{% else %}right{% endif %}">
                     <ul class="nav navbar-nav navbar-right">
