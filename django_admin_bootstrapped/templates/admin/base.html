@@ -24,6 +24,7 @@
     <script src="{% static "admin/js/jquery-1.9.1.min.js" %}"></script>
     <script src="{% static "admin/js/jquery-migrate-1.2.1.min.js" %}"></script>
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "bootstrap/js/adlook.js" %}"></script>
 
     {% block extrahead %}{% endblock %}
 
@@ -79,6 +80,7 @@
                         {% endblock %}
                         {% block languages %}
                         <li class="divider-vertical"></li>
+                        <li>{% trans 'Welcome,' %} <strong>{% filter force_escape %}{% firstof user.get_short_name user.get_username %}{% endfilter %}</strong></li>
                         {% language_selector %}
                         {% endblock languages %}
                         {% block logs %}
