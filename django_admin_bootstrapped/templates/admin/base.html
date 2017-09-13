@@ -61,14 +61,15 @@
                 </div>
                 <div id="header-navbar-collapse" class="navbar-collapse collapse navbar-{% if LANGUAGE_BIDI %}left{% else %}right{% endif %}">
                     <ul class="nav navbar-nav">
-                        <a href="{% url 'admin:core_controlplan_changelist' %}" class="btn btn-lg btn-primary" >Контрольный план</a>
-                        <a href="{% url 'admin:core_controltest_changelist' %}" class="btn btn-lg btn-primary" >Тестирование контролей</a>
-                        <a href="{% url 'admin:core_ipe_changelist' %}" class="btn btn-lg btn-primary" >IPE</a>
-                        <a href="{% url 'admin:core_deficiency_changelist' %}" class="btn btn-lg btn-primary" >Дефекты</a>
+
                         {% if has_permission %}
                         {% block usertools %}
                         {% block welcome-msg %}
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Welcome,' %} <strong>{% filter force_escape %}{% firstof user.get_short_name user.get_username %}{% endfilter %}</strong> <span class="caret"></span></a>
+                        <a href="{% url 'admin:core_controlplan_changelist' %}" class="btn btn-lg btn-primary" >Контрольный план</a>
+                        <a href="{% url 'admin:core_controltest_changelist' %}" class="btn btn-lg btn-primary" >Тестирование контролей</a>
+                        <a href="{% url 'admin:core_ipe_changelist' %}" class="btn btn-lg btn-primary" >IPE</a>
+                        <a href="{% url 'admin:core_deficiency_changelist' %}" class="btn btn-lg btn-primary" >Дефекты</a>
                         {% endblock %}
                         {% endblock %}
                         {% block languages %}
