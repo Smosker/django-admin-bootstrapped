@@ -63,10 +63,10 @@
                     {% endblock %}
                 </div>
                     <ul class="nav navbar-nav">
-                        <li><a href="{% url 'admin:core_controltest_changelist' %}" class="btn btn-md btn-primary" >Тестирование контролей</a></li>
-                    <li><a href="{% url 'admin:core_controlplan_changelist' %}" class="btn btn-md btn-primary" >Контрольный план</a></li>
-                    <li><a href="{% url 'admin:core_ipe_changelist' %}" class="btn btn-md btn-primary" >IPE</a></li>
-                    <li><a href="{% url 'admin:core_deficiency_changelist' %}" class="btn btn-md btn-primary" >Дефекты</a></li>
+                    <li><a href="{% url 'admin:core_controltest_changelist' %}">Тестирование контролей</a></li>
+                    <li><a href="{% url 'admin:core_controlplan_changelist' %}">Контрольный план</a></li>
+                    <li><a href="{% url 'admin:core_ipe_changelist' %}"  >IPE</a></li>
+                    <li><a href="{% url 'admin:core_deficiency_changelist' %}">Дефекты</a></li>
                     </ul>
                 <div id="header-navbar-collapse" class="navbar-collapse collapse navbar-{% if LANGUAGE_BIDI %}left{% else %}right{% endif %}">
                     <ul class="nav navbar-nav">
