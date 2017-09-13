@@ -11,6 +11,10 @@
     display: none;
 }
 
+.actions  {
+    width: auto !important;
+}
+
 #action-toggle {
     display: none;
 }
