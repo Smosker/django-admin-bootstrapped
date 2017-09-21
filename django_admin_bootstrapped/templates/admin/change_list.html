@@ -54,6 +54,9 @@
             <span class="glyphicon glyphicon-plus"></span> {% blocktrans with cl.opts.verbose_name as name %}Add {{ name }}{% endblocktrans %}
         </a>
         </li>
+        {% if cl.opts.verbose_name_plural == "Control Plans"  %}
+        <li><a class="btn btn-primary" href="{% url 'admin:core_controlplan_changelist' %}">Сброс фильтров</a></li>
+        {% endif %}
         {% endif %}
         {% endblock %}
     </ul>
