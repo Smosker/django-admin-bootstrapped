@@ -53,6 +53,8 @@
         <a role="button" href="{% add_preserved_filters add_url is_popup %}" class="btn btn-primary">
             <span class="glyphicon glyphicon-plus"></span> {% blocktrans with cl.opts.verbose_name as name %}Add {{ name }}{% endblocktrans %}
         </a>
+        <li>cl.opts.verbose_name_plural</li>
+        <li>some data</li>
         </li>
         {% if cl.opts.verbose_name_plural == "Control Plans"  %}
         <li><a class="btn btn-primary" href="{% url 'admin:core_controlplan_changelist' %}">Сброс фильтров</a></li>
