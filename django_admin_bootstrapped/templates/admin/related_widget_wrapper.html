@@ -12,7 +12,7 @@
         {% if can_add_related %}
         <a class="related-widget-wrapper-link add-related" id="add_id_{{ name }}"
             href="{{ add_related_url }}?{{ url_params }}"
-            title="Add {{ model }}|lower">
+            title="{% blocktrans %}Add another {{ model }}{% endblocktrans %}">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </a>
         {% endif %}
